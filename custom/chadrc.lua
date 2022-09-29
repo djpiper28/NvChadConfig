@@ -47,7 +47,7 @@ M.plugins = {
         },
         ["williamboman/mason.nvim"] = {},
         ["lervag/vimtex"] = {},
-        ["github.com/salkin-mada/openscad.nvim"] = {},
+        ["salkin-mada/openscad.nvim"] = {},
     },
     status = {
         dashboard = true,
