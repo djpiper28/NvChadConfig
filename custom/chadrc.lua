@@ -48,6 +48,22 @@ M.plugins = {
         ["williamboman/mason.nvim"] = {},
         ["lervag/vimtex"] = {},
         ["salkin-mada/openscad.nvim"] = {},
+        ["Pocco81/AbbrevMan.nvim"] = {
+            local abbrev_man = require("abbrev-man")
+
+            abbrev_man.setup({
+                load_natural_dictionaries_at_startup = true,
+                load_programming_dictionaries_at_startup = true,
+                natural_dictionaries = {
+                    ["nt_en"] = {}
+                },
+                programming_dictionaries = {
+                    ["pr_py"] = {}
+                }
+
+            })
+            end,
+        },
     },
     status = {
         dashboard = true,
