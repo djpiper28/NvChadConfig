@@ -29,7 +29,6 @@ local plugins = {
         "jsonls",
         "ltex",
         "lua_ls",
-        "openscad_lsp",
         "rust_analyzer",
         "sqlls",
         "tailwindcss",
