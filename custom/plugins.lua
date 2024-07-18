@@ -47,6 +47,46 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-neotest/neotest-jest",
+      "nvim-neotest/neotest-go",
+      "marilari88/neotest-vitest",
+      "nvim-neotest/neotest-python",
+      "rouge8/neotest-rust",
+      "Issafalcon/neotest-dotnet",
+      "weilbith/neotest-gradle",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      -- "nvim-neotest/neotest-vim-test",
+    },
+    lazy = true,
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-jest"),
+          require("neotest-go"),
+          require("neotest-vitest"),
+          require("neotest-python"),
+          require("neotest-rust"),
+          require("neotest-dotnet"),
+          require("neotest-gradle"),
+          -- require("neotest-vim-test"),
+        },
+      })
+    end,
+  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   lazy = false,
+  --   config = function()
+  --     require "custom.configs.dap"
+  --   end,
+  -- },
+  -- {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}, },
 }
 
 return plugins
